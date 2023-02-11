@@ -1,13 +1,26 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { CustomInputGroup } from "../components/CustomInputGroup";
 import { Formcontrol } from "../components/FormControl";
 import { LargeBtn } from "../components/LargeBtn";
+import NavBar from "../components/NavBar";
 
 const LoginPage = () => {
   return (
-    <Flex
+    <Flex>
+      <Stack
+            flex="1"
+            alignItems={"center"}
+            borderRadius="2px"
+            position={"fixed"}
+            right="0"
+            left={"0"}
+            zIndex="1022"
+          >
+          <NavBar />
+        </Stack>
+      <Flex
       background={"white"}
       width="100%"
       height="100vh"
@@ -61,6 +74,7 @@ const LoginPage = () => {
       {/* <Box width={"50%"} height="100%">
         <BackgroundImage />
       </Box> */}
+    </Flex>
     </Flex>
   );
 };

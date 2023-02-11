@@ -1,15 +1,28 @@
-import { Box, Flex, Heading, Progress, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Progress, Stack, Text } from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { CustomInputGroup } from "../components/CustomInputGroup";
 import { Formcontrol } from "../components/FormControl";
 import { LargeBtn } from "../components/LargeBtn";
+import NavBar from "../components/NavBar";
 
 
 
 const SignUpPage = () => {
   return (
-    <Flex
+    <Flex>
+      <Stack
+            flex="1"
+            alignItems={"center"}
+            borderRadius="2px"
+            position={"fixed"}
+            right="0"
+            left={"0"}
+            zIndex="1022"
+          >
+          <NavBar />
+        </Stack>
+      <Flex
       width="100%"
       height="100vh"
       alignItems={"center"}
@@ -79,6 +92,7 @@ const SignUpPage = () => {
           </Box>
         </Box>
       </Box>
+    </Flex>
     </Flex>
   );
 };
